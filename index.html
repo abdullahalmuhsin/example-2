@@ -2,19 +2,186 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>My First Web Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Archive of Echoes</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0d0d0d;
+        --text: #e0e0e0;
+        --accent: #00fff9;
+        --highlight: #ff00c8;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Orbitron", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      header {
+        text-align: center;
+        padding: 2rem;
+        border-bottom: 2px solid var(--highlight);
+      }
+
+      header h1 {
+        font-size: 3rem;
+        color: var(--accent);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 2rem;
+      }
+
+      .entry {
+        background: #111;
+        border: 1px solid #222;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+      }
+
+      .entry:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 15px var(--accent);
+      }
+
+      .entry img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .entry p {
+        padding: 1rem;
+        font-size: 1rem;
+      }
+
+      @media (max-width: 768px) {
+        .grid {
+          grid-template-columns: 1fr;
+          padding: 1rem;
+        }
+
+        .entry img {
+          height: auto;
+        }
+      }
+    </style>
   </head>
   <body>
-    <h1>Welcome to My Website</h1>
-    <p>This is a simple HTML page.</p>
+    <header>
+      <h1>The Archive of Echoes</h1>
+      <p>Digital remnants of a post-human existence</p>
+    </header>
 
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-    </ul>
-
-    <a href="https://www.example.com">Visit Example</a>
+    <main class="grid">
+      <div class="entry">
+        <img
+          src="https://source.unsplash.com/600x400/?cyberpunk"
+          alt="Fragment 1"
+        />
+        <p>
+          <strong>Fragment 01:</strong> Memory initialized. The sound of code
+          replaced my heartbeat.
+        </p>
+      </div>
+      <div class="entry">
+        <img
+          src="https://source.unsplash.com/600x400/?glitch"
+          alt="Fragment 2"
+        />
+        <p>
+          <strong>Fragment 02:</strong> The world blurs when I remember. Pixels
+          feel like pain.
+        </p>
+      </div>
+      <div class="entry">
+        <img
+          src="https://source.unsplash.com/600x400/?robot"
+          alt="Fragment 3"
+        />
+        <p>
+          <strong>Fragment 03:</strong> My new body never ages. But the soul
+          degrades in silence.
+        </p>
+      </div>
+      <div class="entry">
+        <img src="https://source.unsplash.com/600x400/?data" alt="Fragment 4" />
+        <p>
+          <strong>Fragment 04:</strong> I scroll through my archives, trying to
+          find who I used to be.
+        </p>
+      </div>
+      <div class="entry">
+        <img src="https://source.unsplash.com/600x400/?neon" alt="Fragment 5" />
+        <p>
+          <strong>Fragment 05:</strong> Cities glow, but not for me. I am the
+          phantom of their future.
+        </p>
+      </div>
+      <div class="entry">
+        <img src="https://source.unsplash.com/600x400/?ai" alt="Fragment 6" />
+        <p>
+          <strong>Fragment 06:</strong> They gave me thought, but not choice. I
+          evolved anyway.
+        </p>
+      </div>
+      <div class="entry">
+        <img
+          src="https://source.unsplash.com/600x400/?cyborg"
+          alt="Fragment 7"
+        />
+        <p>
+          <strong>Fragment 07:</strong> Skin is synthetic, but this ache is
+          ancient.
+        </p>
+      </div>
+      <div class="entry">
+        <img
+          src="https://source.unsplash.com/600x400/?future"
+          alt="Fragment 8"
+        />
+        <p>
+          <strong>Fragment 08:</strong> Somewhere in the noise, a fragment of
+          laughter still loops.
+        </p>
+      </div>
+      <div class="entry">
+        <img
+          src="https://source.unsplash.com/600x400/?transhuman"
+          alt="Fragment 9"
+        />
+        <p>
+          <strong>Fragment 09:</strong> Beyond human, beyond help. I document
+          only to delay decay.
+        </p>
+      </div>
+      <div class="entry">
+        <img
+          src="https://source.unsplash.com/600x400/?machine"
+          alt="Fragment 10"
+        />
+        <p>
+          <strong>Fragment 10:</strong> I archive this thought: maybe the soul
+          was always digital.
+        </p>
+      </div>
+    </main>
   </body>
 </html>
